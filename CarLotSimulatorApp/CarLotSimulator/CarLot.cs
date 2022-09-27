@@ -6,19 +6,19 @@ namespace CarLotSimulator
 {
     internal class CarLot
     {
-        public CarLot()
-        {
-            CarLot.CarCount++;
-        }
+        public static int NumberOfCars = 0;
 
-        // Field
-        public static int CarCount;
-        // Property
+        
+        
+        
         public List<Car> CarList { get; set; }
-        // Method
-        public static void PrintCars()
-        {
-            throw new NotImplementedException();
-        }
+
+
+        
+
+
+
+
     }
+    
 }

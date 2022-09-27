@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CarLotSimulator
 {
@@ -18,6 +19,12 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+            CarLot carLot = new CarLot();
+            carLot.CarList = new List<Car>();
+
+
+            
+            
             var Car1 = new Car();
 
             
@@ -28,7 +35,16 @@ namespace CarLotSimulator
             Car1.HonkNoise = "High Pitch";
             Car1.IsDrivable = "No";
 
+
+            carLot.CarList.Add(Car1);
+            
+
             Car1.PrintInfo();
+
+            Console.WriteLine($"Number of cars: {CarLot.NumberOfCars}");
+
+
+
 
 
             var Car2 = new Car()
@@ -40,10 +56,30 @@ namespace CarLotSimulator
                 HonkNoise = "High Pitch",
                 IsDrivable = "Yes"
             };
+
+            carLot.CarList.Add(Car2);
             Car2.PrintInfo();
 
+            Console.WriteLine($"Number of cars: {CarLot.NumberOfCars}");
+
             var Car3 = new Car("2022", "Lamborghini", "Turbo", "Extremely Loud", "Low Pitch", "Yes");
+            carLot.CarList.Add(Car3);
             Car3.PrintInfo();
+            Console.WriteLine($"Number of cars: {CarLot.NumberOfCars}");
+
+            foreach (var Car in carLot.CarList)
+            {
+                Console.WriteLine("-----------------------------------------");
+                Console.WriteLine(Car.Year);
+                Console.WriteLine(Car.Make);
+                Console.WriteLine(Car.Model);
+                
+                
+
+
+            }
+            
+
 
 
 
